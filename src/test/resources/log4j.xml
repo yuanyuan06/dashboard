@@ -29,7 +29,7 @@
     </layout>
   </appender>
 
-  <category name="o_o">
+  <category name="com.yuanyuan.webStudy.simpleWeb">
     <priority value="DEBUG"/>
   </category>
 
