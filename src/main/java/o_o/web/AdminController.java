@@ -21,7 +21,6 @@ public class AdminController extends BaseController{
 	
 	
 	@RequestMapping(value="/test")
-	
 	public @ResponseBody String test(HttpServletRequest request, HttpServletResponse response, int a, int b)
 	{
 		return "register";
