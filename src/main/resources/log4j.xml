@@ -30,7 +30,7 @@
   </appender>
 
   <category name="o_o">
-    <priority value="DEBUG"/>
+    <priority value="INFO"/>
   </category>
 
   <category name="org.springframework">
