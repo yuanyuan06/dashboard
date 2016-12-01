@@ -33,7 +33,7 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>spring3</servlet-name>
+        <servlet-name>spring4</servlet-name>
         <url-pattern>*.htm</url-pattern>
     </servlet-mapping>
     <session-config>

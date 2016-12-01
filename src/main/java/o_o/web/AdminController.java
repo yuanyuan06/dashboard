@@ -5,7 +5,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/admin")
@@ -21,8 +20,8 @@ public class AdminController extends BaseController{
 	
 	
 	@RequestMapping(value="/test")
-	public @ResponseBody String test(HttpServletRequest request, HttpServletResponse response, int a, int b)
+	public String test(HttpServletRequest request, HttpServletResponse response)
 	{
-		return "register";
+		return "index";
 	}
 }
