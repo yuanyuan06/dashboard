@@ -1,5 +1,14 @@
 $("#register").click(function(){
-	window.location.href = "admin/register.htm";
+	$.post(
+	"admin/testJSON.htm",
+	{a:'1', b:'2'},
+	function(data){
+		alert(data);
+		console.log(data.a + '   ' + data.b);
+	},
+	'json'
+	);
+// 	window.location.href = "admin/register.htm";
 })
 
 

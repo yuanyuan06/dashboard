@@ -5,6 +5,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import o_o.model.JsonModel;
 
 @Controller
 @RequestMapping("/admin")
@@ -23,5 +26,13 @@ public class AdminController extends BaseController{
 	public String test(HttpServletRequest request, HttpServletResponse response)
 	{
 		return "index";
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping(value="/testJSON")
+	public JsonModel testJSON(HttpServletRequest request, HttpServletResponse response, JsonModel jm)
+	{
+		return jm;
 	}
 }
