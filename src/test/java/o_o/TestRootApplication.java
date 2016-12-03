@@ -10,7 +10,6 @@ public class TestRootApplication extends AbstractJUnit4SpringContextTests {
     
     protected Log log = LogFactory.getLog(getClass());
 //    protected Logger logger = LoggerFactory.getLogger(getClass());
-    
 }
 
 

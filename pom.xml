@@ -224,9 +224,9 @@
 		<resources>
 			<resource>
 				<directory>src/main/java</directory>
-				<includes>
+				<!-- <includes>
 					<include>**/*.xml</include>
-				</includes>
+				</includes> -->
 			</resource>
 		</resources>
 		<!-- <pluginManagement> -->
