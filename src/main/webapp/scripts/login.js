@@ -1,6 +1,8 @@
 $("#register").click(function(){
+
+	requestData = $.toJSON();
 	$.post(
-	"admin/testJSON.htm",
+	"admin/testJSONt.htm",
 	{a:'1', b:'2'},
 	function(data){
 		alert(data);
