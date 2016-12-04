@@ -2,7 +2,7 @@ package o_o.model;
 
 import java.util.Date;
 
-public class TmallTrade extends BashEntity {
+public class TmallTrade extends BaseEntity {
 	
 	private static final long serialVersionUID = -785761691456420433L;
 	

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-public abstract class BashEntity implements Serializable {
+public abstract class BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = -9139250608519033260L;
 
