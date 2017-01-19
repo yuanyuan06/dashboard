@@ -338,6 +338,8 @@
           <ul class="treeview-menu">
             <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            ## FIXME json解析
+            <li><a href="#"><i class="fa fa-circle-o"></i>test_parse_json</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -1254,5 +1256,7 @@
 <script src="../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+
+<script src="../scripts/main.js"></script>
 </body>
 </html>
