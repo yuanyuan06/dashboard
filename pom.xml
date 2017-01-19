@@ -243,9 +243,13 @@
 					<artifactId>maven-jetty-plugin</artifactId>
 					<version>6.1.26</version>
 					<configuration>
-						<contextPath>/</contextPath>
-						<scanIntervalSeconds>10</scanIntervalSeconds>
-						<connectors>
+                        <contextPath>/</contextPath>
+                        <scanIntervalSeconds>10</scanIntervalSeconds>
+                        <useTestClasspath>true</useTestClasspath>
+                        <webAppConfig>
+                            <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>
+                        </webAppConfig>
+                        <connectors>
 							<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
 								<port>8080</port>
 								<maxIdleTime>60000</maxIdleTime>
