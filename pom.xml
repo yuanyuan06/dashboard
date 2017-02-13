@@ -16,13 +16,6 @@
   </properties>
 
   <dependencies>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
     
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -41,10 +34,8 @@
 	<dependency>
 	    <groupId>org.quartz-scheduler</groupId>
 	    <artifactId>quartz</artifactId>
-	    <version>2.2.3</version>
+	    <version>2.2.2</version>
 	</dependency>
-	
-	
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
@@ -119,11 +110,6 @@
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>5.1.9</version>
-    </dependency>
-    <dependency>
-      <groupId>org.quartz-scheduler</groupId>
-      <artifactId>quartz</artifactId>
-      <version>2.2.2</version>
     </dependency>
     <dependency>
       <groupId>commons-digester</groupId>
@@ -211,12 +197,6 @@
       <artifactId>utils</artifactId>
       <version>1.07.00</version>
     </dependency>
-
-    <dependency>
-      <groupId>commons-digester</groupId>
-      <artifactId>commons-digester</artifactId>
-      <version>1.8.1</version>
-    </dependency>
      <dependency>
       <groupId>org.apache.velocity</groupId>
       <artifactId>velocity</artifactId>
@@ -227,16 +207,25 @@
       <artifactId>velocity-tools</artifactId>
       <version>1.4</version>
     </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
   </dependencies>
 
 	<build>
 		<resources>
-			<resource>
-				<directory>src/main/java</directory>
-				<!-- <includes>
-					<include>**/*.xml</include>
-				</includes> -->
-			</resource>
+          <resource>
+            <directory>${basedir}/src/main/java</directory>
+            <includes>
+              <include>**/*.properties</include>
+              <include>**/*.xml</include>
+            </includes>
+          </resource>
+          <resource>
+            <directory>${basedir}/src/main/resources</directory>
+          </resource>
 		</resources>
 		<!-- <pluginManagement> -->
 			<plugins>
@@ -254,9 +243,13 @@
 					<artifactId>maven-jetty-plugin</artifactId>
 					<version>6.1.26</version>
 					<configuration>
-						<contextPath>/</contextPath>
-						<scanIntervalSeconds>10</scanIntervalSeconds>
-						<connectors>
+                        <contextPath>/</contextPath>
+                        <scanIntervalSeconds>10</scanIntervalSeconds>
+                        <useTestClasspath>true</useTestClasspath>
+                        <webAppConfig>
+                            <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>
+                        </webAppConfig>
+                        <connectors>
 							<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
 								<port>8080</port>
 								<maxIdleTime>60000</maxIdleTime>
