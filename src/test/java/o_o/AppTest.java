@@ -1,38 +1,26 @@
 package o_o;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+
+import com.alibaba.fastjson.JSON;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+public class AppTest{
+	
+	@Test
+	public void tt(){
+		Map<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> list = new HashMap<String, Object>();
+		list.put("二级标题1", "oo");
+		list.put("二级标题2", "pp");
+		list.put("二级标题3", "uu");
+		
+		map.put("一级标题", list);
+		System.out.println(JSON.toJSONString(map));
+	}
 }

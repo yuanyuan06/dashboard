@@ -1,5 +1,6 @@
 // 菜单初始化
 $(document).ready(function (){
+    var testjson = '{"一级标题":["二级标题1","二级标题1","二级标题1"]}';
     var i = 0;
      $(".treeview-menu").find("li").each(function(){
         i++;
